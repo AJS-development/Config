@@ -7,14 +7,14 @@ constructor(configs) {
 this.configs = configs
 }
 parse(string) {
-  return parser(string)
+  return parser(string,this.configs)
   
 }
 stringify(config) {
   
   return stringify(config)
 }
-stringifyConcat(config,add) {
+stringifyNonoverride(config,add) {
   
   
 }

@@ -1,0 +1,24 @@
+{
+  "name": "SmartConfig",
+  "version": "1.4.8",
+  "description": "A smart configloader",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/AJS-development/Config.git"
+  },
+  "keywords": [
+    "config"
+  ],
+  "dependencies": {
+    
+  },
+  "author": "Andrew s <andrews54757@gmail.com>",
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/AJS-development/Config/issues"
+  }
+}

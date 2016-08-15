@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/AJS-development/Config.svg?branch=master)](https://travis-ci.org/AJS-development/Config)
+
+
 # Config
 Smart Config parser
 

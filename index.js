@@ -11,6 +11,19 @@ parse(string) {
   return parser(string,this.configs)
   
 }
+compareFromDefault(compare) {
+  if (!this.default) return false;
+  var result = [];
+  compare.forEach((com,ind)=>{
+  if (this.default[ind] != com) result.push(ind)  
+    
+  })
+  return result
+}
+getDefaultStringified() {
+  if (!this.default) return false
+  return this.stringify(this.default)
+}
 stringify(config) {
   
   return stringify(config,this.configs)

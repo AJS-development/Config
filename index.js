@@ -12,11 +12,41 @@ parse(string) {
 }
 stringify(config) {
   
-  return stringify(config)
+  return stringify(config,this.configs)
 }
-stringifyNonoverride(config,add) {
+stringifyNonoverride(masterText,add,default) {
+ var list = masterText.split("\n")
+ list.forEach((item,ind)=>{
+
+   if (item.charAt(0) == "#") return;
+   var Sitem = item.split(" ") 
+   var ad = add[ind]
+
+     if (ad && ind == Sitem[0]) {
+       if (default && default[ind] == ad) return
+       
+var results = "";
+      var type = this.configs[ind]
+results += ind;
+if (type == "Ostring" || type == "Oint") {
+  
+  ad.forEach((c)=>{
+      results += " " + c
+    
+  })
   
   
+} else if (type == "string" || type == "Jstring" || type == "int") {
+  
+  results += " " + ad;
+}
+list[ind] = results
+     } 
+     
+   
+   
+ })
+  return list.slice(0,list.length).join("\n")
 }
 
 

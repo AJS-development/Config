@@ -1,5 +1,6 @@
-module.exports = function(config) {
-config.forEach((con)=>{
+module.exports = function(config,configs) {
+config.forEach((con,conind)=>{
+var type = configs[conind]
 
 
 

@@ -15,7 +15,7 @@ stringify(config) {
   
   return stringify(config,this.configs)
 }
-stringifyNonoverride(masterText,add,cdefault) {
+stringifyMerge(masterText,add,cdefault) {
   if (cdefault && this.default) var defaulta = this.default; else var defaulta = false;
  var list = masterText.split("\n")
  list.forEach((item,ind)=>{

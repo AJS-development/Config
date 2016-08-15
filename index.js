@@ -3,8 +3,9 @@ const parser = require('./parser.js')
 const stringify = require ('./stringify.js')
 
 module.exports = class ConfigLoader {
-constructor(configs) {
+constructor(configs,defaulta) {
 this.configs = configs
+this.default = defaulta;
 }
 parse(string) {
   return parser(string,this.configs)
@@ -14,7 +15,8 @@ stringify(config) {
   
   return stringify(config,this.configs)
 }
-stringifyNonoverride(masterText,add,default) {
+stringifyNonoverride(masterText,add,cdefault) {
+  if (cdefault && this.default) var defaulta = this.default; else var defaulta = false;
  var list = masterText.split("\n")
  list.forEach((item,ind)=>{
 
@@ -23,7 +25,7 @@ stringifyNonoverride(masterText,add,default) {
    var ad = add[ind]
 
      if (ad && ind == Sitem[0]) {
-       if (default && default[ind] == ad) return
+       if (defaulta && defaulta[ind] == ad) return
        
 var results = "";
       var type = this.configs[ind]

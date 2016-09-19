@@ -1,3 +1,5 @@
+[![NPM] (https://img.shields.io/badge/Module-Npm-blue.svg)] (https://www.npmjs.com/package/SmartConfig)
+[![Donate] (https://img.shields.io/badge/Donate-Paypal-brightgreen.svg)] (paypal.me/andrews54757)
 [![Build Status](https://travis-ci.org/AJS-development/Config.svg?branch=master)](https://travis-ci.org/AJS-development/Config)
 
 

@@ -11,6 +11,9 @@ parse(string) {
   return parser(string,this.configs)
   
 }
+  parseWithDefault(string) {
+   var parsed = parser(string,this.configs,this.default) 
+  }
 compareFromDefault(compare) {
   if (!this.default) return false;
   var result = [];

@@ -1,7 +1,12 @@
 "use strict"
 
-module.exports = function(string,configs) {
+module.exports = function(string,configs,defaultt) {
   var results = [];
+  if (defaultt) {
+  for (var i in defaultt) {
+   results[i] = defaultt 
+  }
+  }
 var split = string.split("\n")
 split.forEach((con)=>{
   if (con.charAt(0) == "#") return;

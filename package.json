@@ -1,6 +1,6 @@
 {
   "name": "SmartConfig",
-  "version": "1.4.8",
+  "version": "1.4.9",
   "description": "A smart configloader",
   "main": "index.js",
   "scripts": {
